@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="boxicons-2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+  <script src="js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <title>Index</title>
+</head>
+
+<body>
+  <main>
+    <header class="navigation">
+      <div class="navigation__left">
+        <div class="navigation__left--navIcon" style="cursor: pointer" onclick="openCloseFunction()">
+          <i class="bx bx-menu"></i>
+        </div>
+
+        <div class="navigation__left--mainLogo">
+          <img src="../assets/logo2.png" alt="" />
+        </div>
+
+        <div class="navigation__left--searchField">
+          <input type="text" placeholder="Поиск..." />
+          <div class="searchImg">
+            <img src="../assets/searchImg.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation__right">
+        <div class="navigation__right--languageOnly" id="myDiv">
+          <a href="#" class="btn">TM</a>
+          <a href="#" class="btn activeLanguage">RU</a>
+          <a href="#" class="btn">EN</a>
+        </div>
+
+        <div class="navigation__right--chatbox tablinks" onclick="openTab(event, 'chat')">
+          <img src="../assets/chatbox.png" alt="" />
+        </div>
+
+        <div class="navigation__right--bellIcon tablinks" onclick="openTab(event, 'bell')">
+          <i class="bx bxs-bell"></i>
+          <span></span>
+        </div>
+
+        <div class="navigation__right--loginPhoto tablinks" onclick="openTab(event, 'login')">
+          <img src="../assets/profileImg.jpg" alt="" />
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="section__sideNav tab" id="mySidenav">
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Главная')" id="defaultOpen">
+          <div class="Img">
+            <img src="../assets/home.png" alt="" style="width: 100%" />
+          </div>
+          <button>Главная</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Справочник')">
+          <div class="Img">
+            <img src="../assets/directory.png" alt="" />
+          </div>
+          <button>Справочник</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Лицевой')">
+          <div class="Img">
+            <img src="../assets/user.png" alt="" />
+          </div>
+          <button>Лицевой счет</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Показание')">
+          <div class="Img">
+            <img src="../assets/meterReading.png" alt="" />
+          </div>
+          <button>Показание счетчиков</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'История')">
+          <div class="Img">
+            <img src="../assets/history.png" alt="" />
+          </div>
+          <button>История начислений</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Заявки')">
+          <div class="Img">
+            <img src="../assets/applications.png" alt="" />
+          </div>
+          <button>Заявки</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'опросники')">
+          <div class="Img">
+            <img src="../assets/questionaire.png" alt="" />
+          </div>
+          <button>Мои опросники</button>
+        </div>
+        <div class="section__sideNav--item tablinks" onclick="openTab(event, 'Заказ')">
+          <div class="Img">
+            <img src="../assets/service.png" alt="" />
+          </div>
+          <button>Заказ услуг</button>
+        </div>
+
+        <a href="#" id="downloadBtn1">
+          <img src="../assets/googlePlay.png" alt="" width="100%" height="100%;" />
+        </a>
+        <a href="#" id="downloadBtn2">
+          <img src="../assets/appStore.png" alt="" width="100%" height="100%;" />
+        </a>
+      </div>
+
+      <div class="section__main" id="main">
+        <div id="chat" class="tabcontent">
+          <h1>Чат с диспетчером</h1>
+
+
+
+
+        </div>
+        <div id="bell" class="tabcontent">
+          <h1>Уведомления</h1>
+          <div class="tabcontent__bellContainer">
+            <div class="tabcontent__bellContainer--nav">
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Ulker')" id="defaultOpen2">
+                <div class="content">
+                  <p><i class='bx bxs-circle'></i>&nbsp; Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p><i class='bx bxs-circle'></i>&nbsp; Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p><i class='bx bxs-circle'></i>&nbsp; Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p> Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p> Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p> Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+              <div class="contentAndTime tablinks2" onclick="openNavTab(event, 'Gulshat')">
+                <div class="content">
+                  <p> Водоснабжение</p>
+                  <p>Ваша оплата на водоснабжение прошла успешно</p>
+                </div>
+                <div class="time">
+                  <p>08:00</p>
+                </div>
+              </div>
+            </div>
+            <div class="tabcontent__bellContainer--main tabcontent2" id="Ulker">
+              <h2>Водоснабжение</h2>
+              <p>11:00 13.09.2022</p>
+              <p>Здравствуйте Мурад, напоминаем вам что увас не оплаченный счет за предыдущий год. Прикрепляем чек на
+                оплату и просим оплатить в наикратчайший срок.</p>
+              <div class="checkImg">
+                <img src="../assets/checkImage.png" alt="">
+              </div>
+            </div>
+            <div class="tabcontent__bellContainer--main tabcontent2" id="Gulshat">
+              <h2>Водоснабжение</h2>
+              <p>11:00 13.09.2022</p>
+              <p>Здравствуйте Мурад, напоминаем вам что увас не оплаченный счет за предыдущий год. Прикрепляем чек на
+                оплату и просим оплатить в наикратчайший срок.</p>
+              <div class="checkImg">
+                <img src="../assets/checkImage.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="login" class="tabcontent">
+          <h1>Профиль</h1>
+          <div class="tabcontent__profile">
+            <div class="tabcontent__profile--nav">
+              <button class="tablinks3" id="defaultOpen3" onclick="openProFileTab(event, 'Hello')"><i
+                  class='bx bxs-user'></i>Личные данные</button>
+              <button class="tablinks3" id="settingBell" onclick="openProFileTab(event, 'World')"><i
+                  class='bx bxs-bell'></i>Настройка уведомлений</button>
+            </div>
+            <div class="tabcontent__profile--main">
+              <form class="personalData tabcontent3" id="Hello">
+                <div class="inputField">
+                  <input class="inputName" type="text" required>
+                  <label class="labelName" required>Ф.И.О</label>
+                </div>
+                <div class="inputField">
+                  <input class="inputName" type="tel" required>
+                  <label class="labelName" required>Номер  домашнего телефона</label>
+                </div>
+                <div class="inputField">
+                  <input class="inputName" type="email" required>
+                  <label class="labelName" required>Email</label>
+                </div>
+                <div class="inputField">
+                  <input class="inputName" type="text" required>
+                  <label class="labelName" required>Серия паспорта</label>
+                </div>
+                <div class="inputField">
+                  <input class="inputName" type="number" required min="0" oninput="this.value = 
+                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+                  <label class="labelName" required>Количество прописанных</label>
+                </div>
+                <div class="inputField">
+                  <input class="inputName" id="password-place" type="password" required  minlength="4" maxlength="16">
+                  <label class="labelName" required>Password</label>
+                  <div class="eye-btn" onclick="show()">
+
+                    <i class='bx bx-show bx-tada bx-rotate-90' id="button-pass"></i>
+
+                </div>
+                </div>
+                <input type="submit" name="" id="submitBtn" value="Сохранить">
+              </form>
+              <div class="settingBell tabcontent3" id="World">
+                <p>Правила уведомления</p>
+                  
+                <form action="">
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <div class="checkField">
+                    <label for="">Уведомлять меня об этом №1</label>
+                    <input type="checkbox" name="" id="">
+                  </div>
+                  <input type="submit" id="SaveBtn" name="" value="Сохранить">
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="Главная" class="tabcontent">
+          <h1>Новости</h1>
+          <div class="tabcontent__superContent">
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabcontent__mainContent">
+            <h4>
+              Хотим построить новый центр для проведения разных мероприятий
+              (худай ёлы и т.д)
+            </h4>
+            <div class="tabcontent__mainContent--body">
+              <div class="ashgabatPic">
+                <img src="../assets/ashgabat.png" alt="" />
+              </div>
+              <p>
+                Уважаемые жители дома №23. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно.
+              </p>
+            </div>
+            <div class="tabcontent__mainContent--details">
+              <div class="tabcontent__mainContent--detail1">
+                <a href="#">Мурад Агаев</a>
+                <span>24.09.2021</span>
+                <span>Осталось 3 дня</span>
+              </div>
+              <div class="tabcontent__mainContent--detail2">
+                <a href="#">Учавствовать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabcontent__superContent">
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabcontent__superContent">
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="tabcontent__subContent">
+              <h4>
+                Коммунальные услуги, предоставленные на общедомовые нужды -
+                ОДН
+              </h4>
+              <p>
+                В связи с острой актуальностью и широким освещением в
+                средствах массовой информации недовольства плательщиков по
+                вопросу начисления за ОДН "Управляющая компания
+              </p>
+              <div class="tabcontent__subContent--details">
+                <span>24.09.2021</span>
+                <a href="#">Прочитать <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="showAllBtn">Показать все</a>
+        </div>
+
+        <div id="Справочник" class="tabcontent">
+          <h1>Справочник жителя</h1>
+          <div class="tabcontent__directory">
+            <table>
+              <th>Службы экстренного вызова</th>
+              <tr>
+                <td>
+                  <p>Пожарная служба</p>
+                  <p>01</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Полиция</p>
+                  <p>02</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Скорая помощь</p>
+                  <p>03</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Газоснабжение</p>
+                  <p>04</p>
+                </td>
+              </tr>
+              <tr>
+                <td id="warning" style="color: #c46632">
+                  <p>Аварийно-диспетчерское обслуживание лифтовых систем</p>
+                  <p>+993 62 22 12 22</p>
+                </td>
+              </tr>
+            </table>
+            <table>
+              <th>Дополнительно</th>
+              <tr>
+                <td>
+                  <p>Дом управления</p>
+                  <p>21 20 22</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Вахтер</p>
+                  <p>21 20 22</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Справочная аптек</p>
+                  <p>93 17 15; 75 52 02</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Таксопарк</p>
+                  <p>76 05 01</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Аэропорт</p>
+                  <p>23 20 34</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Вокзал</p>
+                  <p>23 20 34</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div id="Лицевой" class="tabcontent">
+          <h1>Лицевой счет</h1>
+          <div class="tabcontent__personal">
+            <table>
+              <th>№261247</th>
+              <tr>
+                <td>
+                  <span>Собственник</span>
+                  <b>Мырадов Мырат Мырадович</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Адрес</span>
+                  <b>Ашхабад, Гаудан “В” дом 56 кв 12</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Номер телефона</span>
+                  <b>+993 65 34 21 21</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>E-mail</span>
+                  <b>Не задано</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Количество прописанных</span>
+                  <b>4</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Количество проживающих</span>
+                  <b>3</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Дом управление №</span>
+                  <b>27</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="Показание" class="tabcontent">
+          <h1>Показания счетчиков</h1>
+          <form class="tabcontent__counterCont" name="" action="">
+            <div class="tabcontent__counterCont--counter">
+              <div class="head">
+                <b>Газоснабжение</b>
+                <svg width="45" height="27" viewBox="0 0 45 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M25.3864 6.075H5.80646C5.3676 6.075 4.96249 6.24375 4.65866 6.5475C4.35484 6.85125 4.18603 7.2225 4.18603 7.66125V15.9975C4.18603 16.4363 4.35484 16.8413 4.65866 17.1113C4.96249 17.415 5.3676 17.5838 5.80646 17.5838H25.3864C25.8252 17.5838 26.2303 17.415 26.5341 17.1113C26.838 16.8075 27.0068 16.4363 27.0068 15.9975V7.66125C27.0068 7.2225 26.838 6.8175 26.5341 6.5475C26.2303 6.24375 25.8252 6.075 25.3864 6.075ZM5.77269 5.4H25.3526C25.994 5.4 26.5679 5.67 26.973 6.075C27.3781 6.48 27.6482 7.05375 27.6482 7.66125V15.9975C27.6482 16.605 27.3781 17.1788 26.973 17.5838C26.5679 17.9888 25.994 18.2588 25.3526 18.2588H5.77269C5.13128 18.2588 4.55739 18.0225 4.15228 17.5838C3.74718 17.1788 3.47712 16.605 3.47712 15.9975V7.66125C3.47712 7.05375 3.74718 6.48 4.15228 6.075C4.59114 5.67 5.16503 5.4 5.77269 5.4ZM6.92048 7.425C7.69693 7.425 8.30457 8.0325 8.30457 8.775V12.15C8.30457 12.8925 7.69693 13.5 6.92048 13.5C6.14404 13.5 5.53637 12.8925 5.53637 12.15V8.775C5.53637 8.0325 6.17779 7.425 6.92048 7.425ZM10.3638 7.425C11.1403 7.425 11.7479 8.0325 11.7479 8.775V12.15C11.7479 12.8925 11.1403 13.5 10.3638 13.5C9.5874 13.5 8.97974 12.8925 8.97974 12.15V8.775C9.0135 8.0325 9.62116 7.425 10.3638 7.425ZM13.841 7.425C14.6174 7.425 15.225 8.0325 15.225 8.775V12.15C15.225 12.8925 14.6174 13.5 13.841 13.5C13.0645 13.5 12.4569 12.8925 12.4569 12.15V8.775C12.4569 8.0325 13.0983 7.425 13.841 7.425ZM17.3181 7.425C18.0945 7.425 18.7022 8.0325 18.7022 8.775V12.15C18.7022 12.8925 18.0945 13.5 17.3181 13.5C16.5416 13.5 15.934 12.8925 15.934 12.15V8.775C15.934 8.0325 16.5416 7.425 17.3181 7.425ZM20.7614 7.425C21.5379 7.425 22.1455 8.0325 22.1455 8.775V12.15C22.1455 12.8925 21.5379 13.5 20.7614 13.5C19.985 13.5 19.3773 12.8925 19.3773 12.15V8.775C19.3773 8.0325 20.0188 7.425 20.7614 7.425ZM24.2048 7.425C24.9813 7.425 25.5889 8.0325 25.5889 8.775V12.15C25.5889 12.8925 24.9813 13.5 24.2048 13.5C23.4284 13.5 22.8207 12.8925 22.8207 12.15V8.775C22.8207 8.0325 23.4621 7.425 24.2048 7.425ZM34.1298 11.745C34.2648 15.93 31.7329 15.8288 31.3953 18.7313C31.024 21.8363 33.6909 22.7475 33.6909 22.7475C31.6992 20.0475 33.8935 18.36 33.7247 17.9888C33.7247 17.9888 34.4674 18.6638 34.231 19.305C34.0285 19.9463 35.4126 18.5287 35.4463 17.01C35.4801 15.4912 35.4463 16.4025 35.4463 16.4025C35.4463 16.4025 37.168 17.3475 37.2018 19.5075C37.2693 21.6675 35.7839 22.6125 35.7839 22.6125C35.7839 22.6125 38.012 22.4775 38.5521 19.7775C39.2273 16.5038 36.6279 13.6013 34.1298 11.745ZM40.949 3.375H4.01724C3.27456 3.375 2.63315 3.67875 2.16053 4.15125C1.68791 4.62375 1.38409 5.265 1.38409 5.97375V23.1187C1.38409 23.8275 1.68791 24.4687 2.16053 24.9412C2.63315 25.4137 3.30832 25.7175 4.01724 25.7175H40.9827C41.6917 25.7175 42.3668 25.4137 42.8395 24.9412C43.3121 24.4687 43.6159 23.8275 43.6159 23.1187V5.97375C43.6159 5.265 43.3121 4.62375 42.8395 4.15125C42.3331 3.67875 41.6917 3.375 40.949 3.375ZM5.16504 1.35H6.92048V1.0125C6.92048 0.4725 7.39309 0 7.96698 0H10.7352C11.3091 0 11.7817 0.43875 11.7817 1.0125V1.35H32.4419V1.0125C32.4419 0.4725 32.9145 0 33.4884 0H36.2566C36.8304 0 37.3031 0.43875 37.3031 1.0125V1.35H39.126C39.5649 1.35 39.97 1.65375 40.105 2.025H40.9827C42.0968 2.025 43.0758 2.46375 43.8185 3.1725C44.5611 3.88125 45 4.86 45 5.94V23.085C45 24.165 44.5611 25.1438 43.8185 25.8525C43.0758 26.5613 42.0968 27 40.9827 27H4.01724C2.90321 27 1.89047 26.5613 1.18155 25.8525C0.43886 25.1438 0 24.165 0 23.085V5.94C0 4.86 0.43886 3.88125 1.18155 3.1725C1.92423 2.46375 2.90321 2.025 4.01724 2.025H4.18603C4.32107 1.65375 4.72618 1.35 5.16504 1.35Z"
+                    fill="#E63756" />
+                </svg>
+              </div>
+              <div class="body">
+                <div class="body__previous">
+                  <b>Предыдущие показания</b>
+                  <span>029543</span>
+                </div>
+                <div class="body__input">
+                  <label for="code">Введите текущие показания</label>
+                  <input type="text" id="code" value="032112" />
+                </div>
+                <div class="body__foto">
+                  <label for="imageUpload">+ Прикрепить фотографию</label>
+                  <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+                </div>
+                <div class="body__check">
+                  <b>Итого: 20 ман</b>
+                  <span>Дата поверки: 21.12.2022</span>
+                </div>
+                <div class="body__submit">
+                  <input type="submit" name="submit" value="Отправить" />
+                </div>
+              </div>
+            </div>
+            <div class="tabcontent__counterCont--counter">
+              <div class="head">
+                <b>Газоснабжение</b>
+                <svg width="45" height="27" viewBox="0 0 45 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M24.8683 6.075H5.68796C5.25805 6.075 4.86121 6.24375 4.56359 6.5475C4.26596 6.85125 4.10061 7.2225 4.10061 7.66125V15.9975C4.10061 16.4363 4.26596 16.8413 4.56359 17.1113C4.86121 17.415 5.25805 17.5838 5.68796 17.5838H24.8683C25.2982 17.5838 25.695 17.415 25.9926 17.1113C26.2902 16.8075 26.4556 16.4363 26.4556 15.9975V7.66125C26.4556 7.2225 26.2902 6.8175 25.9926 6.5475C25.695 6.24375 25.2982 6.075 24.8683 6.075ZM5.65488 5.4H24.8352C25.4635 5.4 26.0257 5.67 26.4225 6.075C26.8193 6.48 27.0839 7.05375 27.0839 7.66125V15.9975C27.0839 16.605 26.8193 17.1788 26.4225 17.5838C26.0257 17.9888 25.4635 18.2588 24.8352 18.2588H5.65488C5.02656 18.2588 4.46438 18.0225 4.06754 17.5838C3.67071 17.1788 3.40615 16.605 3.40615 15.9975V7.66125C3.40615 7.05375 3.67071 6.48 4.06754 6.075C4.49745 5.67 5.05962 5.4 5.65488 5.4ZM6.77925 7.425C7.53984 7.425 8.13509 8.0325 8.13509 8.775V12.15C8.13509 12.8925 7.53984 13.5 6.77925 13.5C6.01865 13.5 5.42338 12.8925 5.42338 12.15V8.775C5.42338 8.0325 6.05172 7.425 6.77925 7.425ZM10.1523 7.425C10.9129 7.425 11.5082 8.0325 11.5082 8.775V12.15C11.5082 12.8925 10.9129 13.5 10.1523 13.5C9.39174 13.5 8.79648 12.8925 8.79648 12.15V8.775C8.82955 8.0325 9.42481 7.425 10.1523 7.425ZM13.5585 7.425C14.3191 7.425 14.9143 8.0325 14.9143 8.775V12.15C14.9143 12.8925 14.3191 13.5 13.5585 13.5C12.7979 13.5 12.2026 12.8925 12.2026 12.15V8.775C12.2026 8.0325 12.831 7.425 13.5585 7.425ZM16.9646 7.425C17.7252 7.425 18.3205 8.0325 18.3205 8.775V12.15C18.3205 12.8925 17.7252 13.5 16.9646 13.5C16.2041 13.5 15.6088 12.8925 15.6088 12.15V8.775C15.6088 8.0325 16.2041 7.425 16.9646 7.425ZM20.3377 7.425C21.0983 7.425 21.6936 8.0325 21.6936 8.775V12.15C21.6936 12.8925 21.0983 13.5 20.3377 13.5C19.5771 13.5 18.9819 12.8925 18.9819 12.15V8.775C18.9819 8.0325 19.6102 7.425 20.3377 7.425ZM23.7108 7.425C24.4714 7.425 25.0667 8.0325 25.0667 8.775V12.15C25.0667 12.8925 24.4714 13.5 23.7108 13.5C22.9502 13.5 22.355 12.8925 22.355 12.15V8.775C22.355 8.0325 22.9833 7.425 23.7108 7.425ZM40.1133 3.375H3.93526C3.20773 3.375 2.57941 3.67875 2.11644 4.15125C1.65346 4.62375 1.35584 5.265 1.35584 5.97375V23.1187C1.35584 23.8275 1.65346 24.4688 2.11644 24.9412C2.57941 25.4137 3.2408 25.7175 3.93526 25.7175H40.1464C40.8408 25.7175 41.5022 25.4137 41.9652 24.9412C42.4282 24.4688 42.7258 23.8275 42.7258 23.1187V5.97375C42.7258 5.265 42.4282 4.62375 41.9652 4.15125C41.4691 3.67875 40.8408 3.375 40.1133 3.375ZM5.05963 1.35H6.77925V1.0125C6.77925 0.4725 7.24221 0 7.80439 0H10.5161C11.0783 0 11.5412 0.43875 11.5412 1.0125V1.35H31.7798V1.0125C31.7798 0.4725 32.2428 0 32.8049 0H35.5166C36.0788 0 36.5418 0.43875 36.5418 1.0125V1.35H38.3275C38.7574 1.35 39.1543 1.65375 39.2866 2.025H40.1464C41.2376 2.025 42.1967 2.46375 42.9242 3.1725C43.6517 3.88125 44.0816 4.86 44.0816 5.94V23.085C44.0816 24.165 43.6517 25.1438 42.9242 25.8525C42.1967 26.5613 41.2376 27 40.1464 27H3.93526C2.84396 27 1.85189 26.5613 1.15743 25.8525C0.429903 25.1438 0 24.165 0 23.085V5.94C0 4.86 0.429903 3.88125 1.15743 3.1725C1.88496 2.46375 2.84396 2.025 3.93526 2.025H4.10061C4.23288 1.65375 4.62972 1.35 5.05963 1.35Z"
+                    fill="#2A7BE4" />
+                  <path
+                    d="M34.4898 22.8462C32.5816 22.8462 31.0204 21.2416 31.0204 19.2667C31.0204 17.2919 34.4898 12.0462 34.4898 12.0462C34.4898 12.0462 37.9592 17.2919 37.9592 19.2667C37.9592 21.2416 36.398 22.8462 34.4898 22.8462Z"
+                    fill="#2A7BE4" />
+                </svg>
+              </div>
+              <div class="body">
+                <div class="body__previous">
+                  <b>Предыдущие показания</b>
+                  <span>029543</span>
+                </div>
+                <div class="body__input">
+                  <label for="code">Введите текущие показания</label>
+                  <input type="text" id="code" value="032112" />
+                </div>
+                <div class="body__foto">
+                  <label for="imageUpload">+ Прикрепить фотографию</label>
+                  <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+                </div>
+                <div class="body__check">
+                  <b>Итого: 20 ман</b>
+                  <span>Дата поверки: 21.12.2022</span>
+                </div>
+                <div class="body__submit">
+                  <input type="submit" name="submit" value="Отправить" />
+                </div>
+              </div>
+            </div>
+            <div class="tabcontent__counterCont--counter">
+              <div class="head">
+                <b>Газоснабжение</b>
+                <svg width="46" height="27" viewBox="0 0 46 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M25.9265 6.075H5.93C5.4818 6.075 5.06807 6.24375 4.75778 6.5475C4.44749 6.85125 4.2751 7.2225 4.2751 7.66125V15.9975C4.2751 16.4363 4.44749 16.8413 4.75778 17.1113C5.06807 17.415 5.4818 17.5838 5.93 17.5838H25.9265C26.3747 17.5838 26.7884 17.415 27.0987 17.1113C27.409 16.8075 27.5814 16.4363 27.5814 15.9975V7.66125C27.5814 7.2225 27.409 6.8175 27.0987 6.5475C26.7884 6.24375 26.3747 6.075 25.9265 6.075ZM5.89551 5.4H25.892C26.5471 5.4 27.1332 5.67 27.5469 6.075C27.9606 6.48 28.2364 7.05375 28.2364 7.66125V15.9975C28.2364 16.605 27.9606 17.1788 27.5469 17.5838C27.1332 17.9888 26.5471 18.2588 25.892 18.2588H5.89551C5.24045 18.2588 4.65435 18.0225 4.24063 17.5838C3.82691 17.1788 3.5511 16.605 3.5511 15.9975V7.66125C3.5511 7.05375 3.82691 6.48 4.24063 6.075C4.68883 5.67 5.27493 5.4 5.89551 5.4ZM7.06773 7.425C7.86069 7.425 8.48126 8.0325 8.48126 8.775V12.15C8.48126 12.8925 7.86069 13.5 7.06773 13.5C6.27476 13.5 5.65417 12.8925 5.65417 12.15V8.775C5.65417 8.0325 6.30924 7.425 7.06773 7.425ZM10.5844 7.425C11.3773 7.425 11.9979 8.0325 11.9979 8.775V12.15C11.9979 12.8925 11.3773 13.5 10.5844 13.5C9.79139 13.5 9.1708 12.8925 9.1708 12.15V8.775C9.20527 8.0325 9.82587 7.425 10.5844 7.425ZM14.1355 7.425C14.9284 7.425 15.549 8.0325 15.549 8.775V12.15C15.549 12.8925 14.9284 13.5 14.1355 13.5C13.3425 13.5 12.7219 12.8925 12.7219 12.15V8.775C12.7219 8.0325 13.377 7.425 14.1355 7.425ZM17.6865 7.425C18.4795 7.425 19.1001 8.0325 19.1001 8.775V12.15C19.1001 12.8925 18.4795 13.5 17.6865 13.5C16.8936 13.5 16.273 12.8925 16.273 12.15V8.775C16.273 8.0325 16.8936 7.425 17.6865 7.425ZM21.2032 7.425C21.9961 7.425 22.6167 8.0325 22.6167 8.775V12.15C22.6167 12.8925 21.9961 13.5 21.2032 13.5C20.4102 13.5 19.7896 12.8925 19.7896 12.15V8.775C19.7896 8.0325 20.4447 7.425 21.2032 7.425ZM24.7198 7.425C25.5128 7.425 26.1333 8.0325 26.1333 8.775V12.15C26.1333 12.8925 25.5128 13.5 24.7198 13.5C23.9268 13.5 23.3062 12.8925 23.3062 12.15V8.775C23.3062 8.0325 23.9613 7.425 24.7198 7.425ZM41.8202 3.375H4.10272C3.34423 3.375 2.68917 3.67875 2.2065 4.15125C1.72382 4.62375 1.41354 5.265 1.41354 5.97375V23.1187C1.41354 23.8275 1.72382 24.4688 2.2065 24.9412C2.68917 25.4137 3.3787 25.7175 4.10272 25.7175H41.8547C42.5787 25.7175 43.2683 25.4137 43.7509 24.9412C44.2336 24.4688 44.5439 23.8275 44.5439 23.1187V5.97375C44.5439 5.265 44.2336 4.62375 43.7509 4.15125C43.2338 3.67875 42.5787 3.375 41.8202 3.375ZM5.27493 1.35H7.06773V1.0125C7.06773 0.4725 7.55039 0 8.13649 0H10.9636C11.5497 0 12.0324 0.43875 12.0324 1.0125V1.35H33.1321V1.0125C33.1321 0.4725 33.6148 0 34.2009 0H37.028C37.6141 0 38.0967 0.43875 38.0967 1.0125V1.35H39.9585C40.4067 1.35 40.8204 1.65375 40.9583 2.025H41.8547C42.9924 2.025 43.9923 2.46375 44.7508 3.1725C45.5092 3.88125 45.9574 4.86 45.9574 5.94V23.085C45.9574 24.165 45.5092 25.1438 44.7508 25.8525C43.9923 26.5613 42.9924 27 41.8547 27H4.10272C2.96498 27 1.9307 26.5613 1.20668 25.8525C0.448197 25.1438 0 24.165 0 23.085V5.94C0 4.86 0.448197 3.88125 1.20668 3.1725C1.96517 2.46375 2.96498 2.025 4.10272 2.025H4.2751C4.41301 1.65375 4.82673 1.35 5.27493 1.35Z"
+                    fill="#F68F57" />
+                  <path
+                    d="M32.3404 18.0113L36.6109 11.6308L35.7245 16.3864L39.1489 16.4657L34.2339 22.8462L35.8454 18.0113H32.3404Z"
+                    fill="#F68F57" />
+                </svg>
+              </div>
+              <div class="body">
+                <div class="body__previous">
+                  <b>Предыдущие показания</b>
+                  <span>029543</span>
+                </div>
+                <div class="body__input">
+                  <label for="code">Введите текущие показания</label>
+                  <input type="text" id="code" value="032112" />
+                </div>
+                <div class="body__foto">
+                  <label for="imageUpload">+ Прикрепить фотографию</label>
+                  <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+                </div>
+                <div class="body__check">
+                  <b>Итого: 20 ман</b>
+                  <span>Дата поверки: 21.12.2022</span>
+                </div>
+                <div class="body__submit">
+                  <input type="submit" name="submit" value="Отправить" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="История" class="tabcontent">
+          <h1>История начислений</h1>
+          <div class="tabcontent__history">
+
+            <div class="table">
+              <h2>2022</h2>
+              <div class="row head">
+                <p>Месяц</p>
+                <p>Показание счетчика на начало периода</p>
+                <p>Задолженность на начало периода</p>
+                <p>Показание счетчика к окончанию периода</p>
+                <p>Начислено</p>
+                <p>Всего к оплате</p>
+                <p>Оплачено</p>
+                <p>Задолженность на конец периода</p>
+              </div>
+              <div class="row grey">
+                <p>Январь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="openJan(this)"></i></p>
+              </div>
+              <div id="January">
+                <div class="row head2">
+                  <p>Услуга</p>
+                  <p>Показание счетчика на начало периода</p>
+                  <p>Задолженность на начало периода</p>
+                  <p>Начислено</p>
+                  <p>Начислено</p>
+                  <p>Всего к оплате</p>
+                  <p>Оплачено</p>
+                  <p>Задолженность на конец периода</p>
+                </div>
+                <div class="row grey">
+                  <p>Водоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row white">
+                  <p>Газоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row grey">
+                  <p>Электроснабжени</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+
+                <div class="row white">
+                  <a href="" class="printPaper">Распечатать квитанцию</a>
+                </div>
+
+                <div class="row grey">
+                  <span class="graph">График расхода ресурсов</span>
+                  <div class="row__selects">
+                    <select name="element" id="">
+                      <option value="gas">Газ</option>
+                      <option value="water">Вода</option>
+                      <option value="electricity">Электрик</option>
+                    </select>
+                    <select name="day" id="">
+                      <option value="today">сегодня</option>
+                      <option value="yesterday">вчера</option>
+                      <option value="tomorrow">завтра</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row white">
+                  <canvas id="myChart" style="width: 800px; height: 200px;"></canvas>
+                  <script>
+                    // setup 
+                    var dates = ['2022-01-01', '2022-01-02', '2022-01-03', '2022-01-04',
+                      '2022-01-04', '2022-01-05', '2022-01-06', '2022-01-07', '2022-01-08', '2022-01-09',
+                      '2022-01-10', '2022-01-11', '2022-01-12', '2022-01-13', '2022-01-14', '2022-01-15',
+                      '2022-01-16', '2022-01-17', '2022-01-18', '2022-01-19', '2022-01-20', '2022-01-21',
+                      '2022-01-22', '2022-01-23', '2022-01-24', '2022-01-25', '2022-01-26', '2022-01-27',
+                      '2022-01-28', '2022-01-29', '2022-01-30'];
+                    var datapoints = [0, 1000, 1830, 2170, 2700, 3530, 4000, 9060, 17000, 35000, 49000, 55390, 79230, 88300, 90260, 100300, 45000, 65000, 85000, 25000, 55000, 77000, 50000, 89000, 100000, 120000, 130000, 140500, 150000, 200000, 250000];
+                    console.log(new Date('2022-01-01 00:00:00 GMT+0800'))
+                    var convertedDates = dates.map(date => new Date(date).setHours(0, 0, 0, 0));
+                    console.log(convertedDates)
+                    var data = {
+                      labels: dates,
+                      datasets: [{
+                        label: 'Использовано ресурсов',
+                        data: datapoints,
+                        backgroundColor: [
+                          '#F68F57'
+                        ],
+                        borderColor: [
+                          '#F68F57'
+                        ],
+                        borderWidth: 1
+                      }]
+                    };
+
+                    // config 
+                    var config = {
+                      type: 'line',
+                      data,
+                      options: {
+                        scales: {
+                          x: {
+                            type: 'time',
+                            time: {
+                              unit: 'day'
+                            }
+                          },
+                          y: {
+                            beginAtZero: false
+                          }
+                        }
+                      }
+                    };
+
+                    // render init block
+                    var myChart = new Chart(
+                      document.getElementById('myChart'),
+                      config
+                    );
+                    function filterDate() {
+                      // (new Date('2021-06-09 00:00:00 GMT+0800'))
+                      // const start1 = new Date(document.getElementById('start').value);
+                      // const start = start1.setHours(0, 0, 0, 0);
+                      // const end1 = new Date(document.getElementById('end').value);
+                      // const end = end1.setHours(0, 0, 0, 0);
+
+                      // const filterDates = convertedDates.filter(date => date >= start && date <= end)
+
+                      myChart.config.data.labels = filterDates;
+                      //working on the data
+                      const startArray = convertedDates.indexOf(filterDates[0])
+                      const endArray = convertedDates.indexOf(filterDates[filterDates.length - 1])
+                      console.log(endArray);
+                      const copydatapoints = [...datapoints];
+                      copydatapoints.splice(endArray + 1, filterDates.length);
+                      copydatapoints.splice(0, startArray);
+                      console.log(copydatapoints)
+                      myChart.config.data.datasets[0].data = copydatapoints;
+                      myChart.update();
+                    }
+                  </script>
+                </div>
+
+                <div class="row grey">
+                  <div class="chartdate">
+                    <input id="start" type="date" min="2022-01-01" max="2022-01-31">
+                    <div class="leftRight">
+                      <i class='bx bx-right-arrow-alt'></i>
+                      <i class='bx bx-left-arrow-alt'></i>
+                    </div>
+                    <input id="end" type="date" min="2022-01-01" max="2022-01-31">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row white">
+                <p>Февраль</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="openFeb(this)"></i></p>
+              </div>
+              <div id="February">
+                <div class="row head2">
+                  <p>Услуга</p>
+                  <p>Показание счетчика на начало периода</p>
+                  <p>Задолженность на начало периода</p>
+                  <p>Начислено</p>
+                  <p>Начислено</p>
+                  <p>Всего к оплате</p>
+                  <p>Оплачено</p>
+                  <p>Задолженность на конец периода</p>
+                </div>
+                <div class="row grey">
+                  <p>Водоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row white">
+                  <p>Газоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row grey">
+                  <p>Электроснабжени</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+
+                <div class="row white">
+                  <a href="" class="printPaper">Распечатать квитанцию</a>
+                </div>
+
+                <div class="row grey">
+                  <span class="graph">График расхода ресурсов</span>
+                  <div class="row__selects">
+                    <select name="element" id="">
+                      <option value="gas">Газ</option>
+                      <option value="water">Вода</option>
+                      <option value="electricity">Электрик</option>
+                    </select>
+                    <select name="day" id="">
+                      <option value="today">сегодня</option>
+                      <option value="yesterday">вчера</option>
+                      <option value="tomorrow">завтра</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row white">
+                  <canvas id="myChart2" style="width: 800px; height: 200px;"></canvas>
+                  <script>
+                    // setup 
+                    var dates = ['2022-02-01', '2022-02-02', '2022-02-03', '2022-02-04',
+                      '2022-02-04', '2022-02-05', '2022-02-06', '2022-02-07', '2022-02-08', '2022-02-09',
+                      '2022-02-10', '2022-02-11', '2022-02-12', '2022-02-13', '2022-02-14', '2022-02-15',
+                      '2022-02-16', '2022-02-17', '2022-02-18', '2022-02-19', '2022-02-20', '2022-02-21',
+                      '2022-02-22', '2022-02-23', '2022-02-24', '2022-02-25', '2022-02-26', '2022-02-27',
+                      '2022-02-28'];
+                    var datapoints2 = [0, 1000, 1830, 2170, 35000, 49000, 55390, 2700, 3530, 4000, 9060, 17000, 79230, 88300, 90260, 100300, 45000, 65000, 85000, 25000, 55000, 77000, 50000, 89000, 100000, 120000, 130000, 140500, 150000, 200000, 250000];
+                    console.log(new Date('2022-01-01 00:00:00 GMT+0800'))
+                    var convertedDates2 = dates.map(date => new Date(date).setHours(0, 0, 0, 0));
+                    console.log(convertedDates2)
+                    var data = {
+                      labels: dates,
+                      datasets: [{
+                        label: 'Использовано ресурсов',
+                        data: datapoints2,
+                        backgroundColor: [
+                          '#F68F57'
+                        ],
+                        borderColor: [
+                          '#F68F57'
+                        ],
+                        borderWidth: 1
+                      }]
+                    };
+
+                    // config 
+                    var config = {
+                      type: 'line',
+                      data,
+                      options: {
+                        scales: {
+                          x: {
+                            type: 'time',
+                            time: {
+                              unit: 'day'
+                            }
+                          },
+                          y: {
+                            beginAtZero: false
+                          }
+                        }
+                      }
+                    };
+
+                    // render init block
+                    var myChart2 = new Chart(
+                      document.getElementById('myChart2'),
+                      config
+                    );
+                    function filterDate() {
+                      // (new Date('2021-06-09 00:00:00 GMT+0800'))
+                      // const start1 = new Date(document.getElementById('start').value);
+                      // const start = start1.setHours(0, 0, 0, 0);
+                      // const end1 = new Date(document.getElementById('end').value);
+                      // const end = end1.setHours(0, 0, 0, 0);
+
+                      // const filterDates = convertedDates.filter(date => date >= start && date <= end)
+
+                      myChart2.config.data.labels = filterDates2;
+                      //working on the data
+                      const startArray2 = convertedDates2.indexOf(filterDates2[0])
+                      const endArray2 = convertedDates2.indexOf(filterDates2[filterDates2.length - 1])
+                      console.log(endArray2);
+                      const copydatapoints2 = [...datapoints2];
+                      copydatapoints2.splice(endArray2 + 1, filterDates2.length);
+                      copydatapoints2.splice(0, startArray2);
+                      console.log(copydatapoints2)
+                      myChart2.config.data.datasets[0].data = copydatapoints2;
+                      myChart2.update();
+                    }
+                  </script>
+                </div>
+
+                <div class="row grey">
+                  <div class="chartdate">
+                    <input id="start" type="date" min="2022-01-01" max="2022-01-31">
+                    <div class="leftRight">
+                      <i class='bx bx-right-arrow-alt'></i>
+                      <i class='bx bx-left-arrow-alt'></i>
+                    </div>
+                    <input id="end" type="date" min="2022-01-01" max="2022-01-31">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row grey">
+                <p>Март</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Апрель</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Май</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Июнь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Июль</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Август</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Сентьябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Октябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Ноябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Декабрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+            </div>
+
+            <div class="table">
+              <h2>2022</h2>
+              <div class="row head">
+                <p>Месяц</p>
+                <p>Показание счетчика на начало периода</p>
+                <p>Задолженность на начало периода</p>
+                <p>Показание счетчика к окончанию периода</p>
+                <p>Начислено</p>
+                <p>Всего к оплате</p>
+                <p>Оплачено</p>
+                <p>Задолженность на конец периода</p>
+              </div>
+              <div class="row grey">
+                <p>Январь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="openJan2(this)"></i></p>
+              </div>
+              <div id="January2">
+                <div class="row head2">
+                  <p>Услуга</p>
+                  <p>Показание счетчика на начало периода</p>
+                  <p>Задолженность на начало периода</p>
+                  <p>Начислено</p>
+                  <p>Начислено</p>
+                  <p>Всего к оплате</p>
+                  <p>Оплачено</p>
+                  <p>Задолженность на конец периода</p>
+                </div>
+                <div class="row grey">
+                  <p>Водоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row white">
+                  <p>Газоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row grey">
+                  <p>Электроснабжени</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+
+                <div class="row white">
+                  <a href="" class="printPaper">Распечатать квитанцию</a>
+                </div>
+
+                <div class="row grey">
+                  <span class="graph">График расхода ресурсов</span>
+                  <div class="row__selects">
+                    <select name="element" id="">
+                      <option value="gas">Газ</option>
+                      <option value="water">Вода</option>
+                      <option value="electricity">Электрик</option>
+                    </select>
+                    <select name="day" id="">
+                      <option value="today">сегодня</option>
+                      <option value="yesterday">вчера</option>
+                      <option value="tomorrow">завтра</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row white">
+                  <canvas id="myChart" style="width: 800px; height: 200px;"></canvas>
+                  <script>
+                    // setup 
+                    var dates = ['2022-01-01', '2022-01-02', '2022-01-03', '2022-01-04',
+                      '2022-01-04', '2022-01-05', '2022-01-06', '2022-01-07', '2022-01-08', '2022-01-09',
+                      '2022-01-10', '2022-01-11', '2022-01-12', '2022-01-13', '2022-01-14', '2022-01-15',
+                      '2022-01-16', '2022-01-17', '2022-01-18', '2022-01-19', '2022-01-20', '2022-01-21',
+                      '2022-01-22', '2022-01-23', '2022-01-24', '2022-01-25', '2022-01-26', '2022-01-27',
+                      '2022-01-28', '2022-01-29', '2022-01-30'];
+                    var datapoints = [0, 1000, 1830, 2170, 2700, 3530, 4000, 9060, 17000, 35000, 49000, 55390, 79230, 88300, 90260, 100300, 45000, 65000, 85000, 25000, 55000, 77000, 50000, 89000, 100000, 120000, 130000, 140500, 150000, 200000, 250000];
+                    console.log(new Date('2022-01-01 00:00:00 GMT+0800'))
+                    var convertedDates = dates.map(date => new Date(date).setHours(0, 0, 0, 0));
+                    console.log(convertedDates)
+                    var data = {
+                      labels: dates,
+                      datasets: [{
+                        label: 'Использовано ресурсов',
+                        data: datapoints,
+                        backgroundColor: [
+                          '#F68F57'
+                        ],
+                        borderColor: [
+                          '#F68F57'
+                        ],
+                        borderWidth: 1
+                      }]
+                    };
+
+                    // config 
+                    var config = {
+                      type: 'line',
+                      data,
+                      options: {
+                        scales: {
+                          x: {
+                            type: 'time',
+                            time: {
+                              unit: 'day'
+                            }
+                          },
+                          y: {
+                            beginAtZero: false
+                          }
+                        }
+                      }
+                    };
+
+                    // render init block
+                    var myChart = new Chart(
+                      document.getElementById('myChart'),
+                      config
+                    );
+                    function filterDate() {
+                      // (new Date('2021-06-09 00:00:00 GMT+0800'))
+                      // const start1 = new Date(document.getElementById('start').value);
+                      // const start = start1.setHours(0, 0, 0, 0);
+                      // const end1 = new Date(document.getElementById('end').value);
+                      // const end = end1.setHours(0, 0, 0, 0);
+
+                      // const filterDates = convertedDates.filter(date => date >= start && date <= end)
+
+                      myChart.config.data.labels = filterDates;
+                      //working on the data
+                      const startArray = convertedDates.indexOf(filterDates[0])
+                      const endArray = convertedDates.indexOf(filterDates[filterDates.length - 1])
+                      console.log(endArray);
+                      const copydatapoints = [...datapoints];
+                      copydatapoints.splice(endArray + 1, filterDates.length);
+                      copydatapoints.splice(0, startArray);
+                      console.log(copydatapoints)
+                      myChart.config.data.datasets[0].data = copydatapoints;
+                      myChart.update();
+                    }
+                  </script>
+                </div>
+
+                <div class="row grey">
+                  <div class="chartdate">
+                    <input id="start" type="date" min="2022-01-01" max="2022-01-31">
+                    <div class="leftRight">
+                      <i class='bx bx-right-arrow-alt'></i>
+                      <i class='bx bx-left-arrow-alt'></i>
+                    </div>
+                    <input id="end" type="date" min="2022-01-01" max="2022-01-31">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row white">
+                <p>Февраль</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="openFeb2(this)"></i></p>
+              </div>
+              <div id="February2">
+                <div class="row head2">
+                  <p>Услуга</p>
+                  <p>Показание счетчика на начало периода</p>
+                  <p>Задолженность на начало периода</p>
+                  <p>Начислено</p>
+                  <p>Начислено</p>
+                  <p>Всего к оплате</p>
+                  <p>Оплачено</p>
+                  <p>Задолженность на конец периода</p>
+                </div>
+                <div class="row grey">
+                  <p>Водоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row white">
+                  <p>Газоснабжение</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+                <div class="row grey">
+                  <p>Электроснабжени</p>
+                  <p>75.00 ман</p>
+                  <p>75.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>55.00 ман</p>
+                  <p>130.00 ман</p>
+                  <p>90.00 ман</p>
+                  <p>40.00 ман</p>
+                </div>
+
+                <div class="row white">
+                  <a href="" class="printPaper">Распечатать квитанцию</a>
+                </div>
+
+                <div class="row grey">
+                  <span class="graph">График расхода ресурсов</span>
+                  <div class="row__selects">
+                    <select name="element" id="">
+                      <option value="gas">Газ</option>
+                      <option value="water">Вода</option>
+                      <option value="electricity">Электрик</option>
+                    </select>
+                    <select name="day" id="">
+                      <option value="today">сегодня</option>
+                      <option value="yesterday">вчера</option>
+                      <option value="tomorrow">завтра</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row white">
+                  <canvas id="myChart2" style="width: 800px; height: 200px;"></canvas>
+                  <script>
+                    // setup 
+                    var dates = ['2022-02-01', '2022-02-02', '2022-02-03', '2022-02-04',
+                      '2022-02-04', '2022-02-05', '2022-02-06', '2022-02-07', '2022-02-08', '2022-02-09',
+                      '2022-02-10', '2022-02-11', '2022-02-12', '2022-02-13', '2022-02-14', '2022-02-15',
+                      '2022-02-16', '2022-02-17', '2022-02-18', '2022-02-19', '2022-02-20', '2022-02-21',
+                      '2022-02-22', '2022-02-23', '2022-02-24', '2022-02-25', '2022-02-26', '2022-02-27',
+                      '2022-02-28'];
+                    var datapoints2 = [0, 1000, 1830, 2170, 35000, 49000, 55390, 2700, 3530, 4000, 9060, 17000, 79230, 88300, 90260, 100300, 45000, 65000, 85000, 25000, 55000, 77000, 50000, 89000, 100000, 120000, 130000, 140500, 150000, 200000, 250000];
+                    console.log(new Date('2022-01-01 00:00:00 GMT+0800'))
+                    var convertedDates2 = dates.map(date => new Date(date).setHours(0, 0, 0, 0));
+                    console.log(convertedDates2)
+                    var data = {
+                      labels: dates,
+                      datasets: [{
+                        label: 'Использовано ресурсов',
+                        data: datapoints2,
+                        backgroundColor: [
+                          '#F68F57'
+                        ],
+                        borderColor: [
+                          '#F68F57'
+                        ],
+                        borderWidth: 1
+                      }]
+                    };
+
+                    // config 
+                    var config = {
+                      type: 'line',
+                      data,
+                      options: {
+                        scales: {
+                          x: {
+                            type: 'time',
+                            time: {
+                              unit: 'day'
+                            }
+                          },
+                          y: {
+                            beginAtZero: false
+                          }
+                        }
+                      }
+                    };
+
+                    // render init block
+                    var myChart2 = new Chart(
+                      document.getElementById('myChart2'),
+                      config
+                    );
+                    function filterDate() {
+                      // (new Date('2021-06-09 00:00:00 GMT+0800'))
+                      // const start1 = new Date(document.getElementById('start').value);
+                      // const start = start1.setHours(0, 0, 0, 0);
+                      // const end1 = new Date(document.getElementById('end').value);
+                      // const end = end1.setHours(0, 0, 0, 0);
+
+                      // const filterDates = convertedDates.filter(date => date >= start && date <= end)
+
+                      myChart2.config.data.labels = filterDates2;
+                      //working on the data
+                      const startArray2 = convertedDates2.indexOf(filterDates2[0])
+                      const endArray2 = convertedDates2.indexOf(filterDates2[filterDates2.length - 1])
+                      console.log(endArray2);
+                      const copydatapoints2 = [...datapoints2];
+                      copydatapoints2.splice(endArray2 + 1, filterDates2.length);
+                      copydatapoints2.splice(0, startArray2);
+                      console.log(copydatapoints2)
+                      myChart2.config.data.datasets[0].data = copydatapoints2;
+                      myChart2.update();
+                    }
+                  </script>
+                </div>
+
+                <div class="row grey">
+                  <div class="chartdate">
+                    <input id="start" type="date" min="2022-01-01" max="2022-01-31">
+                    <div class="leftRight">
+                      <i class='bx bx-right-arrow-alt'></i>
+                      <i class='bx bx-left-arrow-alt'></i>
+                    </div>
+                    <input id="end" type="date" min="2022-01-01" max="2022-01-31">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row grey">
+                <p>Март</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Апрель</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Май</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Июнь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Июль</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Август</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Сентьябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Октябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row grey">
+                <p>Ноябрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+              <div class="row white">
+                <p>Декабрь</p>
+                <p>225.00 ман</p>
+                <p>225.00 ман</p>
+                <p>165.00 ман</p>
+                <p>165.00 ман</p>
+                <p>390.00 ман</p>
+                <p>270.00 ман</p>
+                <p><span>120.00 ман</span><i class='bx bx-chevron-right' onclick="myFunction()"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Заявки" class="tabcontent">
+          <div class="tabcontent__headingAndCategory">
+            <h1>Заявки</h1>
+            <div class="selects">
+              <select name="element" id="">
+                <option value="gas">Статус</option>
+                <option value="water">Вода</option>
+                <option value="electricity">Электрик</option>
+              </select>
+              <select name="day" id="">
+                <option value="today">Тип услуги</option>
+                <option value="yesterday">вчера</option>
+                <option value="tomorrow">завтра</option>
+              </select>
+              <select name="day" id="">
+                <option value="today">Тип заявки</option>
+                <option value="yesterday">вчера</option>
+                <option value="tomorrow">завтра</option>
+              </select>
+              <button><i class='bx bx-plus'></i> Добавить новую</button>
+            </div>
+          </div>
+          <div class="tabcontent__apps">
+            <table>
+              <caption>2022</caption>
+              <tr class="head">
+                <th>Номер заявки</th>
+                <th>Поставщик</th>
+                <th>Тема заявки</th>
+                <th>Создано</th>
+                <th>Дата выполнение</th>
+                <th>Статус</th>
+                <th>Оценка</th>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="grey">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="doneStatus">Выполнено</span></td>
+                <td>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </td>
+              </tr>
+              <tr class="white">
+                <td>213412</td>
+                <td>У.К "Берк Гурлушык"</td>
+                <td>Сгорела лампа на 1-ом этаже</td>
+                <td>17.09.2021</td>
+                <td>17.09.2021</td>
+                <td><span id="loadingStatus">В работе</span></td>
+                <td>
+                  <button id="myBtn" class="myBtn">
+                    <span>Оценить услугу</span>
+                    <i class='bx bxs-chevron-right'></i>
+                  </button>
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Агаев Мурад Алтыевич</h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" class="modalForm">
+                          <div class="starrating" id="w__stars"></div>
+                          <input type="text" placeholder="Введите текст комментария (необезательно)">
+                          <div>Ваши отзывы являются общедоступными и включают информацию о вашей учетной записи</div>
+                          <input type="submit" name="">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="опросники" class="tabcontent">
+          <div class="tabcontent__headingAndCategory">
+            <h1>Мои опросники</h1>
+            <button><i class='bx bx-plus'></i> Добавить новую</button>
+          </div>
+          <div class="tabcontent__main" id="questionContainer">
+            <h4>
+              Хотим построить новый центр для проведения разных мероприятий
+              (худай ёлы и т.д)
+            </h4>
+            <div class="tabcontent__main--body">
+              <div class="ashgabatPic">
+                <img src="../assets/ashgabat.png" alt="" />
+              </div>
+              <p>
+                Уважаемые жители дома №23. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно.
+              </p>
+            </div>
+            <form action="" id="thoughtForm">
+              <h3>Как вы на это смотрите?</h3>
+              <div class="firstRow">
+                <input type="button" name="thought" value="Положительно">
+                <input type="button" name="thought" value="Нет я против">
+              </div>
+              <div class="secondRow">
+                <input type="button" name="thought" value="Смогу через некоторое время">
+                <input type="button" name="thought" value="В замешательсве">
+              </div>
+              <input type="submit">
+            </form>
+            <div class="tabcontent__main--details">
+              <div class="tabcontent__main--detail1">
+                <a href="#">Мурад Агаев</a>
+                <span>24.09.2021</span>
+                <span>Осталось 3 дня</span>
+              </div>
+              <div class="tabcontent__main--detail2" id="dNone">
+                <button class="changeBtn" onclick="openThought()">Изменить <i class="bx bx-chevron-right"></i></button>
+                <button class="deleteBtn" onclick="closeThought()">Удалить <i class="bx bx-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="tabcontent__main" id="questionContainer2">
+            <h4>
+              Хотим построить новый центр для проведения разных мероприятий
+              (худай ёлы и т.д)
+            </h4>
+            <div class="tabcontent__main--body">
+              <div class="ashgabatPic">
+                <img src="../assets/ashgabat.png" alt="" />
+              </div>
+              <p>
+                Уважаемые жители дома №23. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно. Хотим построить новый центр для
+                проведения разных мероприятий (худай ёлы и т.д) это будет для
+                всех хорошо и экономно.
+              </p>
+            </div>
+            <form action="" id="thoughtForm2">
+              <h3>Как вы на это смотрите?</h3>
+              <div class="firstRow">
+                <input type="button" name="thought" value="Положительно">
+                <input type="button" name="thought" value="Нет я против">
+              </div>
+              <div class="secondRow">
+                <input type="button" name="thought" value="Смогу через некоторое время">
+                <input type="button" name="thought" value="В замешательсве">
+              </div>
+              <input type="submit">
+            </form>
+            <div class="tabcontent__main--details">
+              <div class="tabcontent__main--detail1">
+                <a href="#">Мурад Агаев</a>
+                <span>24.09.2021</span>
+                <span>Осталось 3 дня</span>
+              </div>
+              <div class="tabcontent__main--detail2" id="dNone2">
+                <button class="changeBtn" onclick="openThought2()">Изменить <i class="bx bx-chevron-right"></i></button>
+                <button class="deleteBtn" onclick="closeThought2()">Удалить <i class="bx bx-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Заказ" class="tabcontent">
+          <div class="tabcontent__headingAndCategory">
+            <h1>Заказ услуг</h1>
+            <div class="selects">
+              <select name="element" id="">
+                <option value="gas">Направление услуг</option>
+                <option value="water">Вода</option>
+                <option value="electricity">Электрик</option>
+              </select>
+              <select name="day" id="">
+                <option value="today">Группа услуг</option>
+                <option value="yesterday">вчера</option>
+                <option value="tomorrow">завтра</option>
+              </select>
+              <select name="day" id="">
+                <option value="today">Услуги</option>
+                <option value="yesterday">вчера</option>
+                <option value="tomorrow">завтра</option>
+              </select>
+              <button><i class='bx bx-plus'></i> Добавить новую</button>
+            </div>
+          </div>
+          <div class="tabcontent__order">
+            <table>
+              <tr class="head">
+                <th>Наименование</th>
+                <th>Направление услуг</th>
+                <th>Группа услуг</th>
+                <th>Услуги</th>
+                <th>Номер телефона</th>
+                <th>Рабочие часы</th>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="grey">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+              <tr class="white">
+                <td>Маркет "Хазына"</td>
+                <td>Продукты питания</td>
+                <td>Управляющая компания</td>
+                <td>Доставка</td>
+                <td>+993 65 32 12 21</td>
+                <td>09:00 - 22:00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/navigation.js"></script>
+
+  <script src="js/calendar .js"></script>
+  <script src="js/fullCalendar.js"></script>
+  <script src="js/realcalendar.js"></script>
+
+
+</body>
+
+</html>

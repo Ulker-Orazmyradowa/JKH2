@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <header class="navigation">
+        <div class="navigation__logo">
+          <img src="../assets/logo.png" alt="" />
+        </div>
+        <div class="navigation__languageOnly" id="myDiv">
+          <a href="#" class="btn">TM</a>
+          <a href="#" class="btn activeLanguage">RU</a>
+          <a href="#" class="btn">EN</a>
+        </div>
+      </header>
+
+      <section class="login-Section">
+        <form class="login-Section__cont" action="" target="_blank">
+          <div class="login-Section__cont--item">
+            <h5>Войти</h5>
+            <p>или <a>Создать аккаунт</a></p>
+          </div>
+          <div class="login-Section__cont--item">
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="login-Section__cont--item">
+            <input
+              type="password"
+              name="password"
+              id=""
+              placeholder="Пароль"
+              required
+            />
+          </div>
+          <div class="login-Section__cont--item">
+            <div class="checkboxItem">
+              <input type="checkbox" name="rememberMe" id="remember" />
+              <label for="remember">Запомнить меня</label>
+            </div>
+            <div class="forgetItem">
+              <a href="#">Забыли пароль?</a>
+            </div>
+          </div>
+          <div class="login-Section__cont--item">
+            <input type="submit" name="submit" id="" value="Войти" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

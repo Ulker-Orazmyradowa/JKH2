@@ -1,0 +1,249 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gt-eesti-pro-display-regular;
+  font-size: 100%;
+  background-color: #edf2f8;
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 75em) {
+  body,
+html {
+    font-size: 97%;
+  }
+}
+@media (max-width: 56.25em) {
+  body,
+html {
+    font-size: 94%;
+  }
+}
+@media (max-width: 37.5em) {
+  body,
+html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 29em) {
+  body,
+html {
+    font-size: 86%;
+  }
+}
+@media (max-width: 18.75em) {
+  body,
+html {
+    font-size: 82%;
+  }
+}
+@media (min-width: 112.5em) {
+  body,
+html {
+    font-size: 110%;
+  }
+}
+
+@font-face {
+  font-family: gt-eesti-pro-display-medium;
+  src: url(../fonts/gt-eesti-pro-display/GTEestiProDisplay-Medium.ttf);
+}
+@font-face {
+  font-family: Merriweather-Bold;
+  src: url(../fonts/merriwether/Merriweather-Bold.ttf);
+}
+@font-face {
+  font-family: gt-eesti-pro-display-regular;
+  src: url(../fonts/gt-eesti-pro-display/GTEestiProDisplay-Regular.ttf);
+}
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+main {
+  width: 95%;
+  margin: 0 60px 0 20px;
+}
+
+.navigation {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  background-color: #edf2f8;
+}
+.navigation__logo {
+  width: 190px;
+  height: 40px;
+}
+.navigation__logo img {
+  width: 100%;
+  height: 100%;
+}
+.navigation__languageAndLogin, .navigation__languageOnly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__languageAndLogin .btn, .navigation__languageOnly .btn {
+  color: #2a7be4;
+  border: 1px solid #2a7be4;
+  border-radius: 3px;
+  transition: all 0.3s;
+  font-size: 13px;
+  padding: 5px;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+.navigation__languageAndLogin .btn:hover, .navigation__languageOnly .btn:hover {
+  color: #fff;
+  background-color: #2a7be4;
+}
+.navigation__languageAndLogin .btn:first-child, .navigation__languageOnly .btn:first-child {
+  margin-left: 0;
+}
+.navigation__languageAndLogin #loginBtn, .navigation__languageOnly #loginBtn {
+  padding: 7px 20px;
+  font-size: 15px;
+}
+.navigation__languageAndLogin .activeLanguage, .navigation__languageOnly .activeLanguage {
+  background-color: #2a7be4;
+  color: white;
+}
+.navigation__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__left--navIcon {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navigation__left--navIcon i {
+  font-size: 30px;
+  color: gray;
+}
+.navigation__left--mainLogo {
+  margin-left: 30px;
+}
+.navigation__left--searchField {
+  position: relative;
+  margin-left: 15px;
+}
+.navigation__left--searchField input {
+  width: 100%;
+  padding: 6px 6px 6px 30px;
+  border: 1px solid #d8e2ee;
+  border-radius: 18px;
+}
+.navigation__left--searchField input:focus {
+  border: 1px solid #2a7be4;
+  outline: none;
+}
+.navigation__left--searchField input::-moz-placeholder {
+  color: #d8e2ee;
+}
+.navigation__left--searchField input:-ms-input-placeholder {
+  color: #d8e2ee;
+}
+.navigation__left--searchField input::placeholder {
+  color: #d8e2ee;
+}
+.navigation__left--searchField .searchImg {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+}
+.navigation__left--searchField .searchImg img {
+  height: 100%;
+  width: 100%;
+}
+.navigation__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__right--languageOnly {
+  margin-right: 30px;
+}
+.navigation__right--languageOnly .btn {
+  color: #2a7be4;
+  border: 1px solid #2a7be4;
+  border-radius: 3px;
+  transition: all 0.3s;
+  font-size: 13px;
+  padding: 5px;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+.navigation__right--languageOnly .btn:hover {
+  color: #fff;
+  background-color: #2a7be4;
+}
+.navigation__right--languageOnly .btn:first-child {
+  margin-left: 0;
+}
+.navigation__right--languageOnly .activeLanguage {
+  background-color: #2a7be4;
+  color: white;
+}
+.navigation__right--chatbox {
+  height: 17px;
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.navigation__right--chatbox img {
+  width: 100%;
+  height: 100%;
+}
+.navigation__right--bellIcon {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.navigation__right--bellIcon span {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #2a7be4;
+  border-radius: 50%;
+}
+.navigation__right--bellIcon i {
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+  margin-top: 7px;
+}
+.navigation__right--loginPhoto {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navigation__right--loginPhoto img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}/*# sourceMappingURL=main.css.map */

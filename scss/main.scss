@@ -1,0 +1,225 @@
+@import "./mixins";
+@import "./variables";
+@import "./responsive";
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gt-eesti-pro-display-regular;
+  font-size: 100%;
+  background-color: #edf2f8;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include respond(tab-land) {
+    font-size: 97%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 94%;
+  }
+
+  @include respond(phone) {
+    font-size: 90%;
+  }
+
+  @include respond(mid-phone) {
+    font-size: 86%;
+  }
+
+  @include respond(lil-phone) {
+    font-size: 82%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 110%;
+  }
+}
+
+@font-face {
+  font-family: gt-eesti-pro-display-medium;
+  src: url(../fonts/gt-eesti-pro-display/GTEestiProDisplay-Medium.ttf);
+}
+
+@font-face {
+  font-family: Merriweather-Bold;
+  src: url(../fonts/merriwether/Merriweather-Bold.ttf);
+}
+
+@font-face {
+  font-family: gt-eesti-pro-display-regular;
+  src: url(../fonts/gt-eesti-pro-display/GTEestiProDisplay-Regular.ttf);
+}
+
+
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+main {
+  width: 95%;
+  margin: 0 60px 0 20px;
+}
+
+.navigation {
+  height: 4.5rem;
+  @include flex(row, space-between, center);
+  position: fixed;
+  top: 0;
+  width: 95%;
+  background-color: #edf2f8;
+
+  &__logo {
+    width: 190px;
+    height: 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__languageOnly {
+    @extend .navigation__languageAndLogin;
+  }
+
+  &__languageAndLogin {
+    @include flex(row, space-between, center);
+
+    .btn {
+      @include linkjagaz;
+      font-size: 13px;
+      padding: 5px;
+      @include transition;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    #loginBtn {
+      padding: 7px 20px;
+      font-size: 15px;
+    }
+    .activeLanguage {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+
+  &__left {
+    @include flex(row, space-between, center);
+    &--navIcon {
+      height: 20px;
+      width: 20px;
+      @include flex(row, center, center);
+      i {
+        font-size: 30px;
+        color: gray;
+      }
+    }
+    &--mainLogo {
+      margin-left: 30px;
+    }
+
+    &--searchField {
+      position: relative;
+      margin-left: 15px;
+      input {
+        width: 100%;
+        padding: 6px 6px 6px 30px;
+        border: 1px solid #d8e2ee;
+        border-radius: 18px;
+        &:focus {
+          border: 1px solid $primary-color;
+          outline: none;
+        }
+        &::placeholder {
+          color: #d8e2ee;
+        }
+      }
+      .searchImg {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        height: 15px;
+        width: 15px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include flex(row, space-between, center);
+
+    &--languageOnly {
+      margin-right: 30px;
+
+      .btn {
+        @include linkjagaz;
+        font-size: 13px;
+        padding: 5px;
+        @include transition;
+        margin-left: 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .activeLanguage {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    &--chatbox {
+      height: 17px;
+      width: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &--bellIcon{
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+      
+      span{
+        position: absolute;
+        top: 4px;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background: $primary-color;
+        border-radius: 50%;
+      }
+      i {
+        text-align: center;
+        color: gray;
+        font-size: 20px;
+        margin-top: 7px;
+      }
+    }
+
+    &--loginPhoto {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
